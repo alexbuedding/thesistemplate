@@ -52,9 +52,9 @@
 \mainmatter
 
 \chapter{Kapitel}\label{chap:first}
-\lipsum[]\parencite{biblatex}
-\acrshort{utc}
-\gls{latex}
+
+\lipsum[1-5]\parencite{biblatex}\acrshort{utc}\gls{latex}
+
 \begin{mycapequ}[!ht]
     \begin{equation}
         {P(\bigcup_{n=1}^n A_n) \leq \sum_{n=1}^n P(A_n)}
@@ -126,8 +126,7 @@ String processCan(){
   }
 }
 \end{lstlisting}
-
-\noindent Und noch ein Beispiel für einen \cref{lst:example}, den wir alle lieben.
+Und noch ein Beispiel für einen \cref{lst:example} den wir alle lieben.
 
 \begin{figure}[!ht]
     \centering
@@ -168,9 +167,27 @@ String processCan(){
 
 \clearpage
 
+\chapter{Kapitel zum Testen der Überschriftenformatierung}\label{chap:formattest}
+
+Hallo, wie geht es dir?
+
+\section{Abschnitt zum Testen der Überschriftenformatierung}\label{sec:formattest}
+
+Mein Name ist Bernhard.
+
+\subsection{Unterabschnitt zum Testen der Überschriftenformatierung}\label{subsec:formattest}
+
+Ich bin 32 Jahre alt.
+
+\subsubsection{Unterunterabschnitt zum Testen der Überschriftenformatierung}\label{subsubsec:formattest}
+
+Und ich bin Lehrer.
+
+\clearpage
+
 \chapter{Letztes Kapitel}\label{chap:last}
 
-\lipsum[1]
+\lipsum[6]
 
 \begin{wrapfigure}{l}{0.4\textwidth}
     \centering
@@ -180,7 +197,7 @@ String processCan(){
     \label{fig:textwrappedaroundexampleimage}
 \end{wrapfigure}
 
-\lipsum[2-4]
+\lipsum[7-9]
 
 \clearpage
 
@@ -303,10 +320,11 @@ String processCan(){
 
 % --- Bibliography --- %
 
+\backmatterpagestyle
 \pagenumbering{Roman}
 \setcounter{page}{\thesavepage}
 
-\printmybib{Literaturverzeichnis}
+\printbibliography[heading=bibintoc,title=Literaturverzeichnis]
 
 \clearpage
 
@@ -322,7 +340,7 @@ String processCan(){
 
 \backmatter
 
-\printnoidxglossary[style=long, title={Glossar}]
+\printnoidxglossary[style=long,title={Glossar}]
 
 \clearpage
 
